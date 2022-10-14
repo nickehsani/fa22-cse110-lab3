@@ -1,9 +1,9 @@
 ---
 name: TODO
-about: This is a test issue template
-title: ''
+about: This is a test issue template for lab 3 of cse 110
+title: 'issue'
 labels: ''
-assignees: ''
+assignees: 'nickehsani'
 
 ---
 
