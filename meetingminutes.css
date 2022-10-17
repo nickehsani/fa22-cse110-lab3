@@ -1,15 +1,36 @@
-/* Aligning all objects to center */
+/* Center allignment */
 h1 {
     text-align: center;
     position: static;
 }
+/* use of element selector and hex code color */
+h2 {
+    color: #6d8ac5
+}
+/* use of attribute selector */
+h2[lang~="en-us"]{
+    color: black
+}
 
-/* class selector */
-.boxLong{
+/* use of selector list */
+h2, h3 {
+    text-decoration: underline;
+}
+
+/* Pseudo-class Selector */
+li:hover{
+    color:#b0c6da;
+}
+/* Descendant Combinator */
+boxShortAuto legend {
+    color: rgb(131,164,191);
+}
+/* Use of class selector */
+.longLeft{
     height: fit-content;
 
     grid-area: main;
-    text-align: center;
+    text-align: left;
     display: block;
     margin-top: 10px;
     margin-bottom: 8px;
@@ -18,30 +39,21 @@ h1 {
 
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 15px;
+    padding-left: 20px;
     padding-right: 15px;
 
-    border-style: solid;
-    border-color: rgb(90, 44, 197);
-    border-radius: 4mm;
+    border-style:solid;
+    border-color: hsl(216, 29%, 51%);
+    border-radius: 4.5mm;
     border-width: .01in;
     display: block;
 }
-boxShortAuto{
-    grid-area: header;
-    max-width: fit-content;
-    min-width: none;
-    max-height: fit-content;
-    text-align: center;
-    margin: auto;
-    padding: 10px;
-    border: .1cm none rgb(222, 222, 222);
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+button:active{
+    background-color: red;
+    color:rgb(255, 255, 255);
+}
+form button{
+    background: rgb(176, 152, 152);
 }
 .body{
     display: grid;
@@ -53,10 +65,41 @@ boxShortAuto{
     "footer footer footer footer";
 }
 
-@media screen and (max-width: 23cm) {
-    header, .boxLong{
-        background-color: rgb(181, 160, 184);
-    }
+/* use of Descendant Combinator */
+shortAuto legend {
+    text-decoration: underline;
+    color: rgb(92, 140, 170);
+}
+/* use of Child Combinator */
+shortAuto > h3 {
+    color: #6d8ac5;
+    align-self: center;
+    text-decoration:underline;
+    flex-basis:content;
+    flex-grow: 10;
+}
+/* use of General sibling combinator */
+short ~ short {
+    background-color: rgba(220, 195, 200, 0.3);
+}
+/* use of Adjacent sibling combinator */
+ul + details {
+    background-color: rgba(252, 229, 165, 0.8);
+}
+/* use of Combining Two Selectors */
+ul.mid{
+    font-size:medium;
+    text-align: left;
+}
+.small li{
+    list-style-position: inside;
+    font-size: .9em;
+}
+/* screen width */
+
+.audioSection{
+    text-align: center;
+    list-style-position: inside;
 }
 
 video {
@@ -67,6 +110,36 @@ img {
     display: block;
     margin: auto;
 }
+/* use of ID Selector for polls */
 #poll {
-    background-color: rgb(241, 219, 192);
+    background-color: rgb(247, 204, 151);
+}
+/* use of universal selector for global font */
+* {
+    font-family: "Merriweather", sans-serif;
+}
+
+short{
+    max-width: fit-content;
+    min-width: none;
+    text-align: center;
+}
+shortAuto{
+    grid-area: header;
+    max-width: fit-content;
+    min-width: none;
+    max-height: fit-content;
+    padding: 10px;
+    border: .1cm none rgb(222, 222, 222);
+    position: relative;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+a:link{
+    color:#0000ff
 }
