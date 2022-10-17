@@ -1,11 +1,18 @@
-/* Aligning all objects to center */
+/* Center allignment */
 h1 {
     text-align: center;
     position: static;
 }
+/* use of element selector and hex code color */
+h2 {
+    color: #6B9
+}
 
-/* class selector */
-.boxLong{
+h2[lang~="en-us"]{
+    color: black
+}
+/* Use of class selector */
+.long{
     height: fit-content;
 
     grid-area: main;
@@ -27,7 +34,55 @@ h1 {
     border-width: .01in;
     display: block;
 }
-boxShortAuto{
+button:active{
+    background-color: red;
+    color:rgb(211, 183, 215);
+}
+.body{
+    display: grid;
+    grid-template-columns:auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+}
+/* screen width */
+@media screen and (max-width: 23cm) {
+    header, .boxLong{
+        background-color: rgb(211, 183, 215);
+    }
+}
+
+.audioSection{
+    text-align: center;
+    list-style-position: inside;
+}
+
+video {
+    display: block;
+    margin: auto;
+}
+img {
+    display: block;
+    margin: auto;
+}
+/* use of ID Selector for polls */
+#poll {
+    background-color: rgb(241, 219, 192);
+}
+/* use of universal selector for global font */
+* {
+    font-family: "Merriweather", sans-serif;
+}
+
+short{
+    max-width: fit-content;
+    min-width: none;
+    text-align: center;
+
+}
+shortAuto{
     grid-area: header;
     max-width: fit-content;
     min-width: none;
@@ -43,30 +98,7 @@ boxShortAuto{
     flex-wrap: wrap;
     justify-content: center;
 }
-.body{
-    display: grid;
-    grid-template-columns:auto;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "header header header header"
-    "main main . sidebar"
-    "footer footer footer footer";
-}
 
-@media screen and (max-width: 23cm) {
-    header, .boxLong{
-        background-color: rgb(181, 160, 184);
-    }
-}
-
-video {
-    display: block;
-    margin: auto;
-}
-img {
-    display: block;
-    margin: auto;
-}
-#poll {
-    background-color: rgb(241, 219, 192);
+a:link{
+    color:#0000ff
 }
