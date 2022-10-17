@@ -48,32 +48,12 @@ boxShortAuto legend {
     border-width: .01in;
     display: block;
 }
-/*same as above just center alligned*/
-.longCenter{
-    height: fit-content;
-
-    grid-area: main;
-    text-align: center;
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 8px;
-    margin-left: 1px;
-    margin-right: 10px;
-
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    border-style: solid;
-    border-color: hsl(216, 29%, 51%);
-    border-radius: 4mm;
-    border-width: .01in;
-    display: block;
-}
 button:active{
     background-color: red;
     color:rgb(255, 255, 255);
+}
+form button{
+    background: rgb(176, 152, 152);
 }
 .body{
     display: grid;
@@ -100,18 +80,21 @@ shortAuto > h3 {
 }
 /* use of General sibling combinator */
 short ~ short {
-    background-color: rgba(108, 49, 61, 0.3);
+    background-color: rgba(220, 195, 200, 0.3);
 }
 /* use of Adjacent sibling combinator */
 ul + details {
-    background-color: rgba(248, 182, 0, 0.8);
+    background-color: rgba(252, 229, 165, 0.8);
 }
 /* use of Combining Two Selectors */
-ul.ems{
-    font-size: x-large;
+ul.mid{
+    font-size:medium;
     text-align: left;
 }
-
+.small li{
+    list-style-position: inside;
+    font-size: .9em;
+}
 /* screen width */
 
 .audioSection{
@@ -146,13 +129,12 @@ shortAuto{
     max-width: fit-content;
     min-width: none;
     max-height: fit-content;
-    text-align: center;
-    margin: auto;
     padding: 10px;
     border: .1cm none rgb(222, 222, 222);
     position: relative;
-
     display: flex;
+    text-align: center;
+    margin: auto;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;

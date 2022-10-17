@@ -27,9 +27,9 @@
     </header>
     <main>
         <section>
-            <div class="longCenter">
+            <div class="longLeft">
                 <h2> Things to do:</h2>
-                <ol>
+                <ol class="small", class="ol">
                     <li> See results of Warren College Student Counsel funding request</li>
                     <li> Write funding request of Marshall or Seventh Student Counsel if Warren says no</li>
                     <li> Update tea club funds spreadsheet from fundraising events</li>
@@ -41,7 +41,7 @@
         <section>
             <div class="longLeft">
                 <h2> Important Announcements</h2>
-                <ul>
+                <ul class="mid">
                     <li> No meeting next week due to midterms.</li>
                     <li> We've raised over $200 from the Yogurt World fundraiser! </li> 
                 </ul>
@@ -55,7 +55,7 @@
                 <b>
                     <span style="color:rgb(63, 213, 78)">Present</span>
                 </b>
-                <ul> 
+                <ul class="mid"> 
                     <li> Nick</li>
                     <li> Tony</li>
                     <li> Monkey D. Luffy</li>
@@ -67,7 +67,7 @@
                 <b>
                     <span style="color:rgb(213, 63, 63)">Absent</span>
                 </b>
-                <ul>
+                <ul class="mid">
                     <li> Zoro</li>
                     <li> Brook</li>
                     <li> Jimbei</li>
@@ -79,12 +79,12 @@
             <div class="longLeft">
                 <h2>New and Unfinished Business</h2>
                 <h4> Unfinished:</h4>
-                <ol>
+                <ol class="small">
                     <li> Send Nami profile pictures for board member post.</li>
                     <li> Check Progress of funding request.</li>
                 </ol>
                 <h4> New Business:</h4>
-                <ol>
+                <ol class="small">
                     <li> Discuss meetup at Ding Tea</li>
                     <li> Collab with baking club next quarter?</li>
                 </ol>
@@ -135,7 +135,7 @@
     <footer>
         <shortAuto id="poll">
             <h3> Polls and Questions</h3>
-            <form>
+            <form action="/survey_page.php" method="get" class="aForm"></form>
                 <fieldset>
                     <legend>Polls</legend>
                     <label>Name:</label>
@@ -154,7 +154,9 @@
                         <option value="Classical">Classical</option>
                         <option value="Hip Hop">Hip Hop</option>
                     </select><br><br>
-                    <input type="submit" value="submit">
+                    <button class="AForm" type="button">   
+                        submit
+                    </button>
                 </fieldset>
                 <fieldset>
                     <legend>Anonymous Feedback and Questions</legend>            
@@ -167,7 +169,9 @@
 
                     <textarea id="feedback" name="feedback" rows="4" cols="50">Type your feedback here</textarea><br><br>
                     <input type="date" id="date" name="date submitted"><br><br>
-                    <input type="button" value="send feedback"> 
+                    <button class="AForm" type="button">   
+                        Send feedback!
+                    </button>
                 </fieldset>
             </form>
         </boxshortauto>
