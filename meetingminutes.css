@@ -5,14 +5,51 @@ h1 {
 }
 /* use of element selector and hex code color */
 h2 {
-    color: #6B9
+    color: #6d8ac5
 }
-
+/* use of attribute selector */
 h2[lang~="en-us"]{
     color: black
 }
+
+/* use of selector list */
+h2, h3 {
+    text-decoration: underline;
+}
+
+/* Pseudo-class Selector */
+li:hover{
+    color:#b0c6da;
+}
+/* Descendant Combinator */
+boxShortAuto legend {
+    color: rgb(131,164,191);
+}
 /* Use of class selector */
-.long{
+.longLeft{
+    height: fit-content;
+
+    grid-area: main;
+    text-align: left;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    margin-left: 1px;
+    margin-right: 10px;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 15px;
+
+    border-style:solid;
+    border-color: hsl(216, 29%, 51%);
+    border-radius: 4.5mm;
+    border-width: .01in;
+    display: block;
+}
+/*same as above just center alligned*/
+.longCenter{
     height: fit-content;
 
     grid-area: main;
@@ -29,14 +66,14 @@ h2[lang~="en-us"]{
     padding-right: 15px;
 
     border-style: solid;
-    border-color: rgb(90, 44, 197);
+    border-color: hsl(216, 29%, 51%);
     border-radius: 4mm;
     border-width: .01in;
     display: block;
 }
 button:active{
     background-color: red;
-    color:rgb(211, 183, 215);
+    color:rgb(255, 255, 255);
 }
 .body{
     display: grid;
@@ -47,12 +84,35 @@ button:active{
     "main main . sidebar"
     "footer footer footer footer";
 }
-/* screen width */
-@media screen and (max-width: 23cm) {
-    header, .boxLong{
-        background-color: rgb(211, 183, 215);
-    }
+
+/* use of Descendant Combinator */
+shortAuto legend {
+    text-decoration: underline;
+    color: rgb(92, 140, 170);
 }
+/* use of Child Combinator */
+shortAuto > h3 {
+    color: #6d8ac5;
+    align-self: center;
+    text-decoration:underline;
+    flex-basis:content;
+    flex-grow: 10;
+}
+/* use of General sibling combinator */
+short ~ short {
+    background-color: rgba(108, 49, 61, 0.3);
+}
+/* use of Adjacent sibling combinator */
+ul + details {
+    background-color: rgba(248, 182, 0, 0.8);
+}
+/* use of Combining Two Selectors */
+ul.ems{
+    font-size: x-large;
+    text-align: left;
+}
+
+/* screen width */
 
 .audioSection{
     text-align: center;
@@ -69,7 +129,7 @@ img {
 }
 /* use of ID Selector for polls */
 #poll {
-    background-color: rgb(241, 219, 192);
+    background-color: rgb(247, 204, 151);
 }
 /* use of universal selector for global font */
 * {
@@ -80,7 +140,6 @@ short{
     max-width: fit-content;
     min-width: none;
     text-align: center;
-
 }
 shortAuto{
     grid-area: header;
