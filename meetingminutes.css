@@ -1,0 +1,5 @@
+/* Aligning all objects to center */
+h1 {
+    text-align: center;
+    position: static;
+}
