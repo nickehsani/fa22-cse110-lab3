@@ -27,7 +27,22 @@ h1 {
     border-width: .01in;
     display: block;
 }
+boxShortAuto{
+    grid-area: header;
+    max-width: fit-content;
+    min-width: none;
+    max-height: fit-content;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    border: .1cm none rgb(222, 222, 222);
+    position: relative;
 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .body{
     display: grid;
     grid-template-columns:auto;
@@ -36,4 +51,22 @@ h1 {
     "header header header header"
     "main main . sidebar"
     "footer footer footer footer";
+}
+
+@media screen and (max-width: 23cm) {
+    header, .boxLong{
+        background-color: rgb(181, 160, 184);
+    }
+}
+
+video {
+    display: block;
+    margin: auto;
+}
+img {
+    display: block;
+    margin: auto;
+}
+#poll {
+    background-color: rgb(241, 219, 192);
 }
